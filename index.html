@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/IMG_20211202_093555 (1).jpg" />
+    <link rel="icon" href="./images/Etch-a-sketch.jpeg" />
     <link rel="stylesheet" href="styles.css" />
     <title>Josh-A-Sketch</title>
   </head>
@@ -14,7 +14,15 @@
       <div id="screen"></div>
       <div class="knobs-div">
         <span class="knob"></span>
-        <button id="erase">Erase</button>
+        <div class="column">
+          <label>Use Eraser?</label>
+          <button id="erase" class="no-erase">Erase</button>
+        </div>
+        <form id="form">
+          <label for="box-size">Brush Size</label>
+          <input type="range" id="box-size" name="box-size" min="0" max="50" />
+          <label>Small <------> Big</label>
+        </form>
         <span class="knob"></span>
       </div>
       <h6>J.A.G. Incorporate</h6>

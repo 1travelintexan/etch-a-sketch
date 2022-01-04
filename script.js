@@ -3,8 +3,8 @@ let eraseBtn = document.querySelector("#erase");
 let blackBox = true;
 
 //create screen
-for (let i = 0; i < 16; i++) {
-  for (let i = 0; i < 16; i++) {
+for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 28; i++) {
     let box = document.createElement("div");
     box.className = "box";
     screen.appendChild(box);
@@ -13,11 +13,21 @@ for (let i = 0; i < 16; i++) {
 
 let boxes = document.querySelectorAll(".box");
 
-//erase button to toggle black or white
+// to draw when you first enter the page
+boxes.forEach((box) => {
+  box.addEventListener("mouseover", () => {
+    box.classList.add("black-box");
+    box.classList.remove("white-box");
+  });
+});
+
+//erase button to toggle black or white and change from draw to earse
 eraseBtn.addEventListener("click", () => {
   blackBox = !blackBox;
   console.log(blackBox);
   if (blackBox == true) {
+    eraseBtn.classList.remove("erase");
+    eraseBtn.classList.add("no-erase");
     boxes.forEach((box) => {
       box.addEventListener("mouseover", () => {
         box.classList.add("black-box");
@@ -26,6 +36,8 @@ eraseBtn.addEventListener("click", () => {
     });
   }
   if (blackBox == false) {
+    eraseBtn.classList.remove("no-erase");
+    eraseBtn.classList.add("erase");
     boxes.forEach((box) => {
       box.addEventListener("mouseover", () => {
         box.classList.remove("black-box");
