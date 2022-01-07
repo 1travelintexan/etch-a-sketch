@@ -32,12 +32,7 @@ button {
   border-radius: 2rem;
   box-shadow: 5px 5px 10px black;
 }
-#container h6 {
-  font-size: 2rem;
-  color: red;
-  text-shadow: 1px 0px 2px black;
-  margin: 0px 0px 10px 0px;
-}
+
 #screen {
   height: 400px;
   width: 660px;
@@ -104,6 +99,24 @@ button {
 }
 .white-box {
   background-color: rgb(156, 156, 156);
+}
+
+.footer {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 50%;
+}
+a {
+  font-size: 1.2rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: rgb(252, 8, 8);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
 }
 
 button:hover {

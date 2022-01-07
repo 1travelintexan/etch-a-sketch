@@ -18,8 +18,12 @@ let boxes = document.querySelectorAll(".box");
 
 //function to clear the screen
 clearBtn.addEventListener("click", () => {
+  //erase screen
   boxes.forEach((box) => {
     box.style.backgroundColor = "#9c9c9c";
+    box.addEventListener("mouseover", () => {
+      box.style.backgroundColor = "black";
+    });
   });
 });
 
@@ -52,25 +56,9 @@ boxes.forEach((box) => {
 
 //erase button to toggle black or white and change from draw to erase
 eraseBtn.addEventListener("click", () => {
-  blackBox = !blackBox;
-  if (blackBox == true) {
-    eraseBtn.classList.remove("erase");
-    eraseBtn.classList.add("no-erase");
-    boxes.forEach((box) => {
-      box.addEventListener("mouseover", () => {
-        box.classList.add("black-box");
-        box.classList.remove("white-box");
-      });
+  boxes.forEach((box) => {
+    box.addEventListener("mouseover", () => {
+      box.style.backgroundColor = "#9c9c9c";
     });
-  }
-  if (blackBox == false) {
-    eraseBtn.classList.remove("no-erase");
-    eraseBtn.classList.add("erase");
-    boxes.forEach((box) => {
-      box.addEventListener("mouseover", () => {
-        box.classList.remove("black-box");
-        box.classList.add("white-box");
-      });
-    });
-  }
+  });
 });
