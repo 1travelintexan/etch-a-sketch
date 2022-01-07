@@ -35,8 +35,8 @@ button {
 
 #screen {
   height: 400px;
-  width: 660px;
-  border: 4px solid black;
+  width: 800px;
+  border: 4px solid gold;
   display: flex;
   flex-wrap: wrap;
   background-color: rgb(156, 156, 156);
