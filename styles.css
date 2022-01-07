@@ -95,14 +95,15 @@ button {
   background-color: rgb(255, 128, 156);
 }
 
+#clear {
+  background-color: skyblue;
+}
+
 .black-box {
   background-color: rgb(0, 0, 0);
 }
 .white-box {
   background-color: rgb(156, 156, 156);
-}
-.color-box {
-  background-attachment: white;
 }
 
 button:hover {
